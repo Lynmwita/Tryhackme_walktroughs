@@ -1,4 +1,4 @@
-<div style="font-size: 18px; font-family: sans-serif; line-height: 1.6;">
+<div style="font-size: 23px; font-family: sans-serif; line-height: 1.6;">
 
 # Exploring Wazuh
 
