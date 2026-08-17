@@ -1,3 +1,5 @@
+<div style="font-size: 18px; font-family: sans-serif; line-height: 1.6;">
+
 # Exploring Wazuh
 
 ![Wazuh Banner](media/image6.png)
@@ -202,3 +204,6 @@ Many government regulations require organizations to monitor critical files for 
 Wazuh goes beyond basic file monitoring with two built-in malware detection features: YARA and VirusTotal integration. Whenever a monitored file is created or modified, Wazuh automatically scans it using your YARA rules and checks its hash against VirusTotal. A match triggers an alert and, optionally, an Active Response action to contain the threat. Note that you must bring your own YARA rules and VirusTotal key to make the features work.
 
 Wazuh is a universal security solution that can fit different needs and be used by different teams. Try installing Wazuh in your home lab—it's highly educational! Also, if you want to play with Wazuh without ingesting real logs, try ingesting the demo data via **Indexer management** > **Sample Data**. Just note that some datasets may require an internet connection to be downloaded. Hope you enjoyed the room!
+
+
+</div>
