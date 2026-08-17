@@ -36,11 +36,10 @@ Agents monitor the events that take place on the device, such as authentication 
 ### Agent Groups
 
 If you were to deploy an agent, you would need to specify the IP address of your Wazuh server, the agent name (typically the same as the hostname), and the group. Agents can be organized into groups, each of which can contain specific audit policies and logging settings. For example, you could have a group named `CORP` for corporate servers and desktops, and another group for personal laptops.
-
-* **Question:** What is the status of the agents managed by this Wazuh?
-  * **Answer:** Disconnected.
-* **Question:** Click on the Windows agent. What is the CPU field value?
-  * **Answer:** AMD EPYC 7571
+**Question:** What is the status of the agents managed by this Wazuh?
+**Answer:** Disconnected.
+**Question:** Click on the Windows agent. What is the CPU field value?
+**Answer:** AMD EPYC 7571
 
 ![Windows Agent Info](media/image3.png)
 
@@ -64,14 +63,12 @@ Once the agent is installed, Wazuh runs lots of security checks and collects a t
 Wazuh is capable of auditing and monitoring an agent's configuration against CIS benchmarks or custom checklists. As shown in the image below, when the Wazuh agent is installed on the Windows machine, it runs 347 CIS security checks (typically PowerShell commands) and verifies the results. You can use this to audit your devices for misconfigurations and prepare them for security audits. Select the WIN-SERVER agent and open its **Configuration Assessment** panel to get started:
 
 ![Configuration Assessment](media/image20.png)
-
-* **Question:** Open the Windows agent and navigate to its IT Hygiene tab. What custom text editor is installed there (Software > Packages)?
-  * **Answer:** Notepad++
+**Question:** Open the Windows agent and navigate to its IT Hygiene tab. What custom text editor is installed there (Software > Packages)?
+**Answer:** Notepad++
 
 ![Notepad++ Packages](media/image23.png)
-
-* **Question:** Now open the Linux agent and its Configuration Assessment tab. What is the CIS Benchmark score of the Linux agent (e.g., 65%)?
-  * **Answer:** 46%
+**Question:** Now open the Linux agent and its Configuration Assessment tab. What is the CIS Benchmark score of the Linux agent (e.g., 65%)?
+**Answer:** 46%
 
 ![Linux CIS Benchmark](media/image11.png)
 
@@ -86,14 +83,12 @@ Wazuh's Vulnerability Detection module is another powerful tool that can be used
 Wazuh reevaluates vulnerabilities from time to time and every time a new package is installed. You can sort and filter vulnerabilities based on various factors such as timestamp, CVE number, package, or description. For example, to filter for Linux kernel vulnerabilities, you should select the `linux-server` agent, go to the **Inventory** sub-tab, and filter for `package.name IS linux-aws`:
 
 ![Vulnerability Filters](media/image9.png)
-
-* **Question:** What is the latest Notepad++ vulnerability found on the Windows agent? Provide the most recent CVE number (e.g., CVE-2026-23569).
-  * **Answer:** CVE-2026-25926
+**Question:** What is the latest Notepad++ vulnerability found on the Windows agent? Provide the most recent CVE number (e.g., CVE-2026-23569).
+**Answer:** CVE-2026-25926
   
 ![Notepad++ CVE](media/image12.png)
-
-* **Question:** What is the earliest critical vulnerability found on the Linux agent? Provide the oldest CVE number (e.g., CVE-2015-3719).
-  * **Answer:** CVE-2021-3773
+**Question:** What is the earliest critical vulnerability found on the Linux agent? Provide the oldest CVE number (e.g., CVE-2015-3719).
+**Answer:** CVE-2021-3773
 
 ![Linux CVE](media/image21.png)
 
@@ -128,14 +123,12 @@ While Wazuh has tons of prebuilt dashboards for routine tasks, you might want to
 ![Create Visualization](media/image10.png)
 
 You can combine multiple visualization panels into a single dashboard. You can explore the prepared Demo Dashboard by navigating to the top-left menu > **Explore** > **Dashboards** menu. The menu might be overwhelming at first, but overall, Wazuh has very powerful reporting capabilities.
-
-* **Question:** Navigate to Discover and search for Defender alerts for the last 5 years using the query `data.win.system.eventID: 1116`. What is the threat name of the detected malware?
-  * **Answer:** Trojan:Win32/CobaltStrike.PU!MTB
+**Question:** Navigate to Discover and search for Defender alerts for the last 5 years using the query `data.win.system.eventID: 1116`. What is the threat name of the detected malware?
+**Answer:** Trojan:Win32/CobaltStrike.PU!MTB
 
 ![Malware Alert](media/image8.png)
-
-* **Question:** Navigate to the Demo Dashboard. How many total events are shown?
-  * **Answer:** 5,495
+**Question:** Navigate to the Demo Dashboard. How many total events are shown?
+**Answer:** 5,495
 
 ![Demo Dashboard](media/image1.png)
 
@@ -166,11 +159,10 @@ Next, the parsed logs must become alerts to be visible in the Wazuh dashboard. T
 Finally, you can configure notifications if some of your rules are triggered. In the simplest case, you can write a query `rule.level >= 12`, create an alert from it in **Explore** > **Alerting** menu, and then set up a notification channel (e.g., Slack message or email). You will receive a notification every time your query matches new events.
 
 ![Alert Notifications](media/image13.png)
-
-* **Question:** How do you call the Wazuh element that extracts fields from raw logs?
-  * **Answer:** Decoder
-* **Question:** What Wazuh alert is more critical, the one with rule.level set to 10 or 15?
-  * **Answer:** 15
+**Question:** How do you call the Wazuh element that extracts fields from raw logs?
+**Answer:** Decoder
+**Question:** What Wazuh alert is more critical, the one with rule.level set to 10 or 15?
+**Answer:** 15
 
 ---
 
